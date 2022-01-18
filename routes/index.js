@@ -11,7 +11,7 @@ router.post('/sleep', function (req, res, next) {
   // Uses shell command to put computer to sleep
   exec('systemctl suspend', (error) => {
     if (error) {
-      res.status(500).send({ message: 'Suspend failed', error: true });
+      res.status(500).send('Suspend failed');
     }
   });
 });
