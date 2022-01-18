@@ -13,6 +13,8 @@ router.post('/sleep', function (req, res, next) {
     if (error) {
       res.status(500).send('Suspend failed');
     }
+
+    res.status(200).send('Yawhn! I am going to sleep...');
   });
 });
 
